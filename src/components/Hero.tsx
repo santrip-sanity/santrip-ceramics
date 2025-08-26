@@ -8,8 +8,8 @@ export default function Hero() {
           SanTrip Ceramics
         </h1>
         <p className="text-xl lg:text-2xl text-neutral-600 mb-8 max-w-3xl mx-auto">
-          Handcrafted pottery pieces that blend traditional techniques with contemporary design.
-          Each piece tells a story of earth, fire, and artistic expression.
+          Handcrafted pottery pieces that don't follow the rules.
+          Each one tells a unique, unrepeatable story.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link 
