@@ -50,7 +50,7 @@ export const FEATURED_POTTERY_QUERY = `*[_type == "potteryPiece" && defined(publ
 }`
 
 // Single Pottery Piece Query
-export const POTTERY_PIECE_QUERY = `*[_type == "potteryPiece" && slug.current == $slug][0] {
+export const POTTERY_PIECE_BY_SLUG_QUERY = `*[_type == "potteryPiece" && slug.current == $slug][0] {
   _id,
   title,
   slug,
