@@ -1,18 +1,20 @@
-import { createClient } from '@sanity/client'
+import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
 export const client = createClient({
   projectId: 'ceo6qysf',
   dataset: 'production',
+  apiVersion: '2023-01-01',
   useCdn: true,
-  apiVersion: '2024-01-01',
 })
 
 const builder = imageUrlBuilder(client)
 
-export const urlFor = (source: unknown) => builder.image(source)
+export function urlFor(source: any) {
+  return builder.image(source)
+}
 
-// GROQ queries
+// Pottery Pieces Query
 export const POTTERY_PIECES_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)] | order(publishedAt desc) {
   _id,
   title,
@@ -36,12 +38,24 @@ export const POTTERY_PIECES_QUERY = `*[_type == "potteryPiece" && defined(publis
   }
 }`
 
-export const POTTERY_PIECE_BY_SLUG_QUERY = `*[_type == "potteryPiece" && slug.current == $slug][0] {
+// Featured Pottery Query  
+export const FEATURED_POTTERY_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)] | order(publishedAt desc)[0...6] {
   _id,
   title,
   slug,
-  images,
   featuredImage,
+  technique,
+  price,
+  status
+}`
+
+// Single Pottery Piece Query
+export const POTTERY_PIECE_QUERY = `*[_type == "potteryPiece" && slug.current == $slug][0] {
+  _id,
+  title,
+  slug,
+  featuredImage,
+  images,
   description,
   technique,
   materials,
@@ -62,23 +76,8 @@ export const POTTERY_PIECE_BY_SLUG_QUERY = `*[_type == "potteryPiece" && slug.cu
   }
 }`
 
-export const POSTS_QUERY = `*[_type == "post" && defined(publishedAt)] | order(publishedAt desc) {
-  _id,
-  title,
-  slug,
-  mainImage,
-  publishedAt,
-  author-> {
-    name,
-    slug
-  },
-  categories[]-> {
-    title,
-    slug
-  }
-}`
-
-export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0] {
+// Posts Query
+export const POSTS_QUERY = `*[_type == "post"] | order(publishedAt desc) {
   _id,
   title,
   slug,
@@ -87,7 +86,24 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   publishedAt,
   author-> {
     name,
-    slug,
+    image
+  },
+  categories[]-> {
+    title,
+    slug
+  }
+}`
+
+// Single Post Query
+export const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
+  _id,
+  title,
+  slug,
+  mainImage,
+  body,
+  publishedAt,
+  author-> {
+    name,
     image,
     bio
   },
@@ -97,12 +113,10 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   }
 }`
 
-export const FEATURED_POTTERY_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)] | order(publishedAt desc)[0...6] {
+// Person Query (for About page)
+export const PERSON_QUERY = `*[_type == "person"][0] {
   _id,
-  title,
-  slug,
-  featuredImage,
-  technique,
-  price,
-  status
+  name,
+  bio,
+  image
 }`
