@@ -13,7 +13,7 @@ const builder = imageUrlBuilder(client)
 export const urlFor = (source: unknown) => builder.image(source)
 
 // GROQ queries
-export const POTTERY_PIECES_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)]
+export const POTTERY_PIECES_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)] | order(publishedAt desc) {
   _id,
   title,
   slug,
