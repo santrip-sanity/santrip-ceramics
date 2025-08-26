@@ -49,7 +49,6 @@ export default async function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-neutral-800 mb-6">About {person.name}</h1>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            A journey through clay, fire, and artistic expression
           </p>
         </div>
 
