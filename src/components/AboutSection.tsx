@@ -10,31 +10,14 @@ export default function AboutSection() {
               Crafted with Passion
             </h2>
             <p className="text-lg text-neutral-600 mb-6">
-              Each piece at SanTrip Ceramics is born from a deep connection to the earth and 
-              a commitment to traditional pottery techniques. We believe that ceramics should 
-              not only be beautiful but also functional, bringing joy to everyday moments.
             </p>
             <p className="text-lg text-neutral-600 mb-8">
-              Our studio combines time-honored methods with contemporary aesthetics, creating 
-              pieces that are both timeless and modern. From wheel-thrown vessels to hand-built 
-              sculptures, every creation tells a unique story.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/about" 
                 className="bg-neutral-800 text-white px-6 py-3 rounded-md hover:bg-neutral-700 transition-colors font-medium text-center"
               >
-                Our Story
-              </Link>
-              <Link 
-                href="/blog" 
-                className="border border-neutral-800 text-neutral-800 px-6 py-3 rounded-md hover:bg-neutral-800 hover:text-white transition-colors font-medium text-center"
-              >
-                Read Blog
-              </Link>
-            </div>
-          </div>
-          
           <div className="relative">
             {/* Placeholder for potter image or ceramic process */}
             <div className="aspect-square bg-gradient-to-br from-amber-100 to-orange-200 rounded-lg flex items-center justify-center">
