@@ -7,29 +7,20 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm border-b border-neutral-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold text-neutral-800 hover:text-neutral-600 transition-colors">
+    <nav className="bg-white border-b border-neutral-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <Link href="/" className="text-xl font-light text-neutral-900 hover:text-neutral-600 transition-colors tracking-wide">
             SanTrip Ceramics
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <Link href="/" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-              Home
-            </Link>
-            <Link href="/gallery" className="text-neutral-700 hover:text-neutral-900 transition-colors">
+          <div className="hidden md:flex space-x-12">
+            <Link href="/gallery" className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors tracking-widest uppercase font-medium">
               Gallery
             </Link>
-            <Link href="/blog" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-              Blog
-            </Link>
-            <Link href="/about" className="text-neutral-700 hover:text-neutral-900 transition-colors">
+            <Link href="/about" className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors tracking-widest uppercase font-medium">
               About
-            </Link>
-            <Link href="/contact" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-              Contact
             </Link>
           </div>
 
@@ -46,22 +37,21 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-200">
-            <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-                Home
-              </Link>
-              <Link href="/gallery" className="text-neutral-700 hover:text-neutral-900 transition-colors">
+          <div className="md:hidden py-6 border-t border-neutral-100">
+            <div className="flex flex-col space-y-6">
+              <Link 
+                href="/gallery" 
+                className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors tracking-widest uppercase font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Gallery
               </Link>
-              <Link href="/blog" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-                Blog
-              </Link>
-              <Link href="/about" className="text-neutral-700 hover:text-neutral-900 transition-colors">
+              <Link 
+                href="/about" 
+                className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors tracking-widest uppercase font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 About
-              </Link>
-              <Link href="/contact" className="text-neutral-700 hover:text-neutral-900 transition-colors">
-                Contact
               </Link>
             </div>
           </div>
