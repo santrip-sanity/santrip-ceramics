@@ -61,3 +61,13 @@ export interface Category {
   title: string
   slug: { current: string }
 }
+
+export interface Person {
+  _id: string
+  name: string
+  bio?: any[]
+  image?: {
+    asset: unknown
+    alt?: string
+  }
+}
