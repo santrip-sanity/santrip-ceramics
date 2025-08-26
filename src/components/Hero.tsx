@@ -15,7 +15,7 @@ export default function Hero() {
           </div>
           
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed font-light">
-            Handcrafted ceramic pieces exploring the intersection of traditional craft and contemporary form
+            Handmade one-off ceramics, perfectly imperfect by design. 
           </p>
           
           <div className="pt-8">
