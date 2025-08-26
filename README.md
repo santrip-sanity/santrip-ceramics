@@ -42,5 +42,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 
+
    Website updated: January 26, 2025 - Modern gallery design 
 
