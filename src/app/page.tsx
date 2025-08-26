@@ -10,7 +10,6 @@ export default async function Home() {
     <main>
       <Hero />
       <FeaturedGallery pieces={featuredPieces} />
-      <AboutSection />
     </main>
   )
 }
