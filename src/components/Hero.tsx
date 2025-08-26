@@ -2,34 +2,32 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-neutral-50 to-neutral-100 py-20 lg:py-32">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-5xl lg:text-7xl font-bold text-neutral-800 mb-6">
-          SanTrip Ceramics
-        </h1>
-        <p className="text-xl lg:text-2xl text-neutral-600 mb-8 max-w-3xl mx-auto">
-          Handcrafted pottery pieces that don't follow the rules.
-          Each one tells a unique, unrepeatable story.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
-            href="/gallery" 
-            className="bg-neutral-800 text-white px-8 py-3 rounded-md hover:bg-neutral-700 transition-colors font-medium"
-          >
-            View Gallery
-          </Link>
-          <Link 
-            href="/about" 
-            className="border border-neutral-800 text-neutral-800 px-8 py-3 rounded-md hover:bg-neutral-800 hover:text-white transition-colors font-medium"
-          >
-            Learn More
-          </Link>
+    <section className="relative bg-white py-32 lg:py-48">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-12">
+          <div className="space-y-8">
+            <h1 className="text-7xl lg:text-9xl font-light text-neutral-900 tracking-tight leading-none">
+              SanTrip
+              <br />
+              <span className="text-neutral-600">Ceramics</span>
+            </h1>
+            <div className="w-24 h-px bg-neutral-300 mx-auto"></div>
+          </div>
+          
+          <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed font-light">
+            Handcrafted ceramic pieces exploring the intersection of traditional craft and contemporary form
+          </p>
+          
+          <div className="pt-8">
+            <Link 
+              href="/gallery" 
+              className="inline-block border border-neutral-900 text-neutral-900 px-12 py-4 hover:bg-neutral-900 hover:text-white transition-all duration-300 font-medium tracking-widest text-sm uppercase"
+            >
+              View Collection
+            </Link>
+          </div>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-amber-100 rounded-full opacity-50 blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-100 rounded-full opacity-50 blur-xl"></div>
     </section>
   )
 }
