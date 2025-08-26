@@ -14,7 +14,7 @@ export default function FeaturedGallery({ pieces }: FeaturedGalleryProps) {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-neutral-800 mb-4">Featured Pieces</h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Discover our latest handcrafted ceramic creations, each piece unique in its beauty and craftsmanship.
+            Take a look at all the pieces. 
           </p>
         </div>
 
