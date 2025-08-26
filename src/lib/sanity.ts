@@ -97,7 +97,7 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   }
 }`
 
-export const FEATURED_POTTERY_QUERY = `*[_type == "potteryPiece" && defined(publishedAt) && status == "available"] | order(publishedAt desc)[0...6] {
+export const FEATURED_POTTERY_QUERY = `*[_type == "potteryPiece" && defined(publishedAt)] | order(publishedAt desc)[0...6] {
   _id,
   title,
   slug,
