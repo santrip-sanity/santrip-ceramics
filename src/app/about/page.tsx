@@ -88,6 +88,6 @@ export default async function AboutPage() {
 }
 
 export const metadata = {
-  title: `About ${person?.name || 'SanTrip Ceramics'}`,
+  title: 'About - SanTrip Ceramics',
   description: 'Learn about the artist behind SanTrip Ceramics and the philosophy that guides our ceramic practice.',
 }
