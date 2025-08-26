@@ -11,9 +11,6 @@ export default async function Gallery() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-neutral-800 mb-6">Gallery</h1>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            Explore our complete collection of handcrafted ceramic pieces. 
-            Each creation is unique, reflecting the beauty of traditional pottery techniques 
-            combined with contemporary artistic vision.
           </p>
         </div>
         
