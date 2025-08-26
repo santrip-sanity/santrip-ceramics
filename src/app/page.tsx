@@ -2,7 +2,6 @@ import { client, FEATURED_POTTERY_QUERY } from '@/lib/sanity'
 import { PotteryPiece } from '@/types/sanity'
 import Hero from '@/components/Hero'
 import FeaturedGallery from '@/components/FeaturedGallery'
-import AboutSection from '@/components/AboutSection'
 
 export default async function Home() {
   const featuredPieces: PotteryPiece[] = await client.fetch(FEATURED_POTTERY_QUERY)
