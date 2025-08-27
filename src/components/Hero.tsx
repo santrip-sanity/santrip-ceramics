@@ -1,4 +1,4 @@
-import Link from 'next/link'
+esimport Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
           </div>
           
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed font-light">
-            Handmade one-off ceramics, perfectly imperfect by design. 
+            Handmade one-off ceramics pieces, perfectly imperfect by design. 
           </p>
           
           <div className="pt-8">
