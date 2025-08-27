@@ -1,38 +1,37 @@
 export default function Footer() {
   return (
-    <footer className="bg-neutral-800 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">SanTrip Ceramics</h3>
-            <p className="text-neutral-300 mb-4">
-              Handcrafted pottery exploring the beauty of imperfection
+    <footer className="bg-neutral-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div className="space-y-6">
+            <h3 className="text-2xl font-light tracking-wide">SanTrip Ceramics</h3>
+            <p className="text-neutral-300 font-light leading-relaxed max-w-md">
+              Handcrafted ceramic pieces exploring the intersection of traditional craft and contemporary form
             </p>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href="https://instagram.com/santrip_ceramics" 
-                  className="text-neutral-300 hover:text-white transition-colors"
-                >
-                  @santrip_ceramics
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="mailto:hello@santripceramics.com" 
-                  className="text-neutral-300 hover:text-white transition-colors"
-                >
-                  Email
-                </a>
-              </li>
-            </ul>
+          <div className="space-y-6">
+            <h4 className="text-lg font-light tracking-wide">Get in Touch</h4>
+            <div>
+              <a 
+                href="https://instagram.com/santrip_ceramics" 
+                className="block text-neutral-300 hover:text-white transition-colors font-light tracking-wide"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @santrip_ceramics
+              </a>
+            </div>
           </div>
         </div>
-        <div className="border-t border-neutral-700 mt-8 pt-8 text-center">
-          <p className="text-neutral-400">© 2025 SanTrip Ceramics. All rights reserved.</p>
+        <div className="border-t border-neutral-800 pt-8">
+          <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-neutral-400 font-light text-sm tracking-wide">
+              © 2025 SanTrip Ceramics. All rights reserved.
+            </p>
+            <p className="text-neutral-500 font-light text-sm tracking-widest uppercase">
+              Crafted with care
+            </p>
+          </div>
         </div>
       </div>
     </footer>
